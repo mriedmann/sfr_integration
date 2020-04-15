@@ -1,0 +1,8 @@
+rootProject.name = 'integration'
+include 'data'
+include 'balance'
+include 'customer'
+include 'core_banking'
+include 'money_laundering'
+includeFlat 'data'
+

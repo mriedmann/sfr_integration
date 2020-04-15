@@ -1,0 +1,17 @@
+server:
+  port : 8083
+
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+      bindings:
+        transactions-in:
+          group: moneylaundering
+          destination: transactions
+          contentType: application/json
+        moneylaundering-out:
+          destination: moneylaundering
+          contentType: application/json

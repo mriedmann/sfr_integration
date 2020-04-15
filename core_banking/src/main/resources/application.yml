@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+          configuration:
+            auto:
+              offset:
+                reset: earliest
+      bindings:
+        transactions-out:
+          destination: transactions
+          contentType: application/json
+        customers-out:
+          destination: customers
+          contentType: application/json
+        customers-in:
+          destination: customers
+          contentType: application/json
